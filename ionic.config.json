@@ -1,0 +1,7 @@
+{
+  "name": "GlobalPet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
