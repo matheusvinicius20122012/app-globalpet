@@ -7,6 +7,9 @@ id:string;
 nome:string;
 email:string;
 password:string;
-lat:string;
-long:string;
+confirmpassword:string;
+lat:number;
+lng:number;
+endereco:string;
+cnpj: number;
 }

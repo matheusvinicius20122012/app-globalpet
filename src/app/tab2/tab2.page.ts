@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PetshopService } from '../petshop/petshop.service';
+import { PetshopService } from '../cadastros/petshop/petshop.service';
 
 @Component({
   selector: 'app-tab2',

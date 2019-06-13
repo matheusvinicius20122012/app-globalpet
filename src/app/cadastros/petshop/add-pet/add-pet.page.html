@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; ">Cadastro Da Loja</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <ion-item>
+      <ion-label position="floating"><b>CNPJ</b></ion-label>
+      <ion-input name="cnpj" type="number" placeholder="cnpj" [(ngModel)]="petshop.cnpj" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><b>Nome da loja</b></ion-label>
+      <ion-input position="floating" name="nome" type="text" [(ngModel)]="petshop.nome" required placeholder="Digite o nome de sua loja"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><b>E-mail</b></ion-label>
+      <ion-input name="email" type="email" placeholder="voce@email.com" [(ngModel)]="petshop.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><b>Senha</b></ion-label>
+      <ion-input name="password" type="password" placeholder="Digite uma senha" [(ngModel)]="petshop.password" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><b>Confirmar senha</b></ion-label>
+      <ion-input name="confirmpassword" type="password" placeholder="Confirme sua senha" [(ngModel)]="petshop.confirmpassword" required></ion-input>
+    </ion-item>
+    
+
+
+
+    <ion-item lines="none">
+      <ion-button type="submit" [disabled]="form.invalid">Register</ion-button>
+      <ion-button href="/tabs">Cancelar </ion-button>
+    </ion-item>
+  </form>
+
+</ion-content>

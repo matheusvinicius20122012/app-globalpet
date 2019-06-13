@@ -1,21 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      PetShop (promoções)
+      PetPromoções
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button color="danger">
-          <ion-icon name="add" [routerLink]="['/tabs/add-petshop']"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div *ngIf="user != null">
+    <h3>Bem vindo: {{ user.email }}</h3>
+    <br>
+    <br>
+    <button ion-button block (click)="Sair()">Sair</button>
+  </div>
+  <div *ngIf="user == null">
+    <br>
+    <h3>Faça seu Login</h3>
+    <ion-item>
+      <ion-input type="text" placeholder="E-mail:" #email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Senha:" #Senha></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+    <ion-button  type="submit"  ion-button block (click)="LoginComEmail()">Login</ion-button>
+    <ion-button  type="submit" ion-button block (click)="cadastrastroPessoal()">Cadastro Pessoal</ion-button>
+  <ion-button  type="submit" ion-button block (click)="cadastroLoja()">Cadastro Loja</ion-button>
+</ion-item></div>
 
-      <ion-list *ngIf="petshop | async as petshop">
-        <ion-item *ngFor="let petshop of petshop">
-          <ion-text>{{petshop.nome}} - {{petshop.key}}</ion-text>
-        </ion-item>
-      </ion-list>
-
+</form>
 </ion-content>

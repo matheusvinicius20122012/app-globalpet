@@ -6,7 +6,36 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  style="color:aqua;">
+<ion-content padding>
+  <ion-content>
+    <ion-card class="">
+      <ion-img src="assets/img/pet.webp"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Bem vindo!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>GlobalPet sempre pensando no melhor!</p>
+      </ion-card-content>
+    </ion-card>
 
-</ion-content>
+ 
 
+  
+
+
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button color="danger">
+            <ion-icon name="add" [routerLink]="['/tabs/add-petshop']"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+    
+        <ion-list *ngIf="petshop | async as petshop">
+          <ion-item *ngFor="let petshop of petshop">
+            <ion-text>{{petshop.nome}} - {{petshop.key}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+
+    </ion-content>

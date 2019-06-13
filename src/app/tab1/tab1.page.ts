@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { PetshopService } from '../cadastros/petshop/petshop.service';
 
 
 @Component({
@@ -10,7 +10,11 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
 
-  constructor() {}
+  private petshop:any;
+
+  constructor(private petshopService: PetshopService) { 
+    this.petshop = this.petshopService.getAll(); 
+  }
 
 
 

@@ -39,7 +39,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../petshop/add-pet/add-pet.module#AddPetPageModule'
+            loadChildren: '../cadastros/petshop/add-pet/add-pet.module#AddPetPageModule'
           }
         ]
       },
