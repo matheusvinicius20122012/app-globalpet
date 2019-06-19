@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PetshopService } from '../cadastros/petshop/petshop.service';
+
 
 @Component({
   selector: 'app-tab2',
@@ -10,8 +10,8 @@ export class Tab2Page {
 
 private petshop:any;
 
-  constructor(private petshopService: PetshopService) { 
-    this.petshop = this.petshopService.getAll(); 
+  constructor() { 
+    
   }
 
   async ngOnInit() {

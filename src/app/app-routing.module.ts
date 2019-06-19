@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'perfil-loja', loadChildren: './perfil/perfil-loja/perfil-loja.module#PerfilLojaPageModule' },
   { path: 'login-pessoa', loadChildren: './login/login-pessoa/login-pessoa.module#LoginPessoaPageModule' },
   { path: 'login-loja', loadChildren: './login/login-loja/login-loja.module#LoginLojaPageModule' },
+  //{ path: 'promocao', loadChildren: './cadastros/petshop/promocao/promocao.module#PromocaoPageModule' },
   //{ path: 'add-pet', loadChildren: './petshop/add-pet/add-pet.module#AddPetPageModule' },
   //{ path: 'addLoja', loadChildren: './petshop/add-pet/add-pet.module#AddPetPageModule' }
 ];

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>promocao</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+        <ion-item>
+          <ion-label position="floating"><b>Nome da promoção</b></ion-label>
+          <ion-input name="promocao" type="text" placeholder="Digite o nome da promoção" [(ngModel)]="petshop.promocao" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"><b>Preço</b></ion-label>
+          <ion-input position="floating" name="preco" type="number" [(ngModel)]="petshop.preco" required placeholder="Digite o preço"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating"><b>Desconto</b></ion-label>
+          <ion-input name="desconto" type="number" placeholder="Digite a quatidade de desconto" [(ngModel)]="petshop.desconto" required></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-button type="submit" [disabled]="form.invalid">Register</ion-button>
+          <ion-button href="/tabs">Cancelar </ion-button>
+        </ion-item>
+      </form>
+    
+
+</ion-content>

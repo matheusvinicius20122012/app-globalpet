@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title style="text-align: center; ">Cadastro Da Loja</ion-title>
-  </ion-toolbar>
+  </ion-toolbar> 
 </ion-header>
 
 
@@ -34,7 +34,11 @@
       <ion-label position="floating"><b>Confirmar senha</b></ion-label>
       <ion-input name="confirmpassword" type="password" placeholder="Confirme sua senha" [(ngModel)]="petshop.confirmpassword" required></ion-input>
     </ion-item>
-    
+   
+    <ion-item>
+      <ion-label position="floating"><b>URL da imagem</b></ion-label>
+      <ion-input name="img" type="text" placeholder="digite a URL" [(ngModel)]="petshop.img" required></ion-input>
+    </ion-item>
 
 
 
@@ -45,3 +49,5 @@
   </form>
 
 </ion-content>
+
+

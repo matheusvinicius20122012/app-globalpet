@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
-
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div *ngIf="user != null">
+      <h3>Bem vindo: {{ user.email }}</h3>
+      <br>
+      <br>
+      <button ion-button block (click)="Sair()">Sair</button>
+    </div>
+    <div *ngIf="user == null">
+      <br>
+      <h3>Faça seu Login</h3>
+      <ion-item>
+        <ion-input type="text" placeholder="E-mail:" #email></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Senha:" #Senha></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+      <ion-button  type="submit"  ion-button block (click)="LoginComEmail()">Login</ion-button>
+      <ion-button  type="submit" ion-button block (click)="cadastrastroPessoal()">Cadastro Pessoal</ion-button>
+    <ion-button  type="submit" ion-button block (click)="cadastroLoja()">Cadastro Loja</ion-button>
+  </ion-item></div>
+  
+  </form>
+  
+  
 </ion-content>

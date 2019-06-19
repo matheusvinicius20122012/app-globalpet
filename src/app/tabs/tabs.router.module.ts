@@ -43,6 +43,24 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'promocao',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cadastros/petshop/promocao/promocao.module#PromocaoPageModule'
+          }
+        ]
+      }, 
+       {
+        path: 'add-pessoa',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cadastros/pessoa/add-pessoa/add-pessoa.module#AddPessoaPageModule'
+          }
+        ]
+      },
       
       {
         path: '',
