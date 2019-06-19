@@ -3,6 +3,7 @@ import { PetshopService } from '../cadastros/petshop/petshop.service';
 
 
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -11,8 +12,11 @@ import { PetshopService } from '../cadastros/petshop/petshop.service';
 export class Tab1Page {
   private petshop:any;
 
+
+
   constructor(private petshopService: PetshopService) { 
     this.petshop = this.petshopService.getAll(); 
+    
   }
 
   async ngOnInit() {

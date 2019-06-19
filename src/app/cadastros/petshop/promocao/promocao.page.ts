@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Petshop } from '../petshop';
-import { PromocaoService } from '../promocao/promocao-service/promocao.service';
+import { PetshopService } from '../petshop.service';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -11,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class PromocaoPage implements OnInit {
 
   private petshop: Petshop;
-  constructor(private promService: PromocaoService,private alertController: AlertController ){ }
+  constructor(private promService: PetshopService,private alertController: AlertController ){ }
 
   ngOnInit() {
     this.petshop = new Petshop;

@@ -11,10 +11,10 @@ export class PromocaoService {
   constructor(private bd: AngularFireDatabase) { }
 
   save(petshop: Petshop) {
-    return this.bd.list("promocao").push(petshop)
+    return this.bd.list("promocao da loja").push(petshop)
   }
  getAll(){
-   return this.bd.list("promocao").snapshotChanges()
+   return this.bd.list("promocao da loja").snapshotChanges()
    .pipe(
      map(changes => changes.map(c => ({key: c.payload.key, ...c.payload.val()} )))
    )

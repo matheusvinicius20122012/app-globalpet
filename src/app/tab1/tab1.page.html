@@ -23,15 +23,11 @@
 
     <ion-card *ngIf="petshop | async as petshop">
       <ion-card-header *ngFor="let petshop of petshop" >
+        <h1>{{petshop.loja}}</h1>
           <ion-card-title style="text-align:center">{{petshop.promocao}}</ion-card-title>
         <ion-card-subtitle> <img src="http://emribeirao.com/wp-content/sabai/File/files/ada08082948f20afc293a2743937e8bc.jpg"></ion-card-subtitle>
-        <ion-card-title style="text-align:center"> {{petshop.preco}}</ion-card-title>
+        <ion-card-title style="text-align:center"> {{petshop.preco}} R$ <h6 color="blue">{{petshop.desconto}}</h6></ion-card-title>
       </ion-card-header>
-    
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
     </ion-card>
 
   
